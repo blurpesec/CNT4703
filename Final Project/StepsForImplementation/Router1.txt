@@ -1,0 +1,25 @@
+
+
+
+1.  Open up Putty
+2.  Enable the Router to run commands:
+    'enable'
+    'conf t'
+3.  Set up IP for serial interface (Se0/0/1 - To Router3):
+    'int S0/0/1'
+    'ip address 192.168.2.2 255.255.255.0'
+    'no shut'
+4.  Set up IP for serial interface (Se0/0/0 - To Router3):
+    'int S0/0/0'
+    'ip address 192.168.1.2 255.255.255.0'
+    'clock rate 56000'
+    'no shut'
+5.  Set up IP for Gigabit Ethernet interface (GigabitEthernet0/0 - To Switch3)
+    ''
+6.  Configure the IP Route (this is a packet-specific default gateway):
+    'conf t'
+    'ip route 192.168.2.0 255.255.255.0 192.168.2.1'
+    'ip route 192.168.10.0 255.255.255.0 192.168.1.1'
+    'ip route 192.168.20.0 255.255.255.0 192.168.1.1'
+    'ip route 192.168.30.0 255.255.255.0 192.168.1.1'
+    

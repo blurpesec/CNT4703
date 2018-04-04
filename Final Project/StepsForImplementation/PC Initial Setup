@@ -1,0 +1,7 @@
+
+Initialize each PC for the Implementation by doing this:
+
+1.  Turn off the Firewall for each PC
+2.  Configure the IP Addresses/Subnets for each PC
+3.  Configure a DNS for each PC (8.8.8.8 / 8.8.4.4)
+4.  
