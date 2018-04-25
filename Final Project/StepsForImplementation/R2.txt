@@ -1,0 +1,12 @@
+en
+conf t
+hostname R2
+int s0/0/1
+ip add 192.168.2.1 255.255.255.252
+clock rate 56000
+no shut
+
+int g0/0
+ip add 192.168.3.1 255.255.255.252
+no shut
+exit
